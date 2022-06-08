@@ -17,3 +17,4 @@ SQLite
 Application low-fidelity wireframe can be found here: [Wireframe (PDF)](./Planner/Wireframe/planner-wireframe.pdf)
 
 # LICENSE
+[MIT](./LICENSE)
