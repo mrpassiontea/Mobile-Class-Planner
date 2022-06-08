@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Planner.CourseDetailPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update Course" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="15">
+        <Label x:Name="courseTitle" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Label x:Name="courseDates" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="courseStatus"/>
+        <Label x:Name="instructorName"/>
+        <Label x:Name="instructorPhone"/>
+        <Label x:Name="instructorEmail"/>
+        <Label x:Name="courseNotes"/>
+        <Label Text="Performance Assessment:" FontSize="Subtitle" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+        <Label x:Name="perfCourseTitle"/>
+        <Label x:Name="perfCourseDates" FontSize="Small" HorizontalOptions="StartAndExpand"/>
+        <Label Text="Objective Assessment:" FontSize="Subtitle" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+        <Label x:Name="objCourseTitle"/>
+        <Label x:Name="objCourseDates" FontSize="Small" HorizontalOptions="StartAndExpand"/>
+        <Button x:Name="shareButton" Style="{StaticResource AddBtn}" Text="SHARE NOTES" Clicked="ShareButton_Clicked"/>
+        <Button x:Name="deleteButton" Style="{StaticResource DeleteBtn}" Text="DELETE COURSE" Clicked="DeleteButton_Clicked"/>
+    </StackLayout>
+</ContentPage>

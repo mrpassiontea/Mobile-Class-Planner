@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Planner.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="deleteBgColor">Red</Color>
+            <Color x:Key="updateBgColor">#F6BE00</Color>
+            <Color x:Key="whiteColor">#FFFFFF</Color>
+            <Color x:Key="addBgColor">blue</Color>
+
+            <Style x:Key="DeleteBtn" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=deleteBgColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource Key=whiteColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="UpdateBtn" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=updateBgColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="AddBtn" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=addBgColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource Key=whiteColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

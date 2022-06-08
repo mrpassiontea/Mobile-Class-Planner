@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Planner.TermDetailPage">
+
+    <StackLayout Margin="15">
+        <Label x:Name="termTitle" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Label x:Name="termDates" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
+        <ListView x:Name="courseListView"
+              ItemSelected="CourseListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Start, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" HorizontalOptions="End"/>
+                            <Label Text="- " FontSize="Small" HorizontalOptions="End"/>
+                            <Label Text="{Binding End, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="ADD COURSE" x:Name="addButton" Clicked="AddButton_Clicked" Style="{StaticResource AddBtn}"/>
+        <Button Text="UPDATE TERM" x:Name="updateButton" Clicked="UpdateButton_Clicked" Style="{StaticResource UpdateBtn}"/>
+        <Button x:Name="deleteButton" Style="{StaticResource DeleteBtn}" Text="DELETE TERM" Clicked="DeleteButton_Clicked"/>
+    </StackLayout>
+</ContentPage>

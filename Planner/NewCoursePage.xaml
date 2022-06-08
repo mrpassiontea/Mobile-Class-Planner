@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Planner.NewCoursePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout Margin="15" VerticalOptions="Start">
+            <Label x:Name="pageTitleTxt" Text="Add Course" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Course Name:" FontAttributes="Bold"/>
+            <Entry x:Name="courseName" Placeholder="Type in course name"/>
+            <Label Text="Start Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="startDate"/>
+            <Label Text="End Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="endDate"/>
+            <Label Text="Course Status:" FontAttributes="Bold"/>
+            <Picker x:Name="courseStatus"/>
+            <Label Text="Instructor Name:" FontAttributes="Bold"/>
+            <Entry x:Name="instructorName" Placeholder="Type in instructor's name"/>
+            <Label Text="Instructor Phone Number:" FontAttributes="Bold"/>
+            <Entry x:Name="instructorPhone" Placeholder="Type in instructor's phone number" MaxLength="20" Keyboard="Telephone"/>
+            <Label Text="Instructor Email:" FontAttributes="Bold"/>
+            <Entry x:Name="instructorEmail" Placeholder="Type in instructor's email" Keyboard="Email"/>
+            <Label Text="Notes (Optional)" FontAttributes="Bold"/>
+            <Entry x:Name="courseNotes" Placeholder="Type course notes here"/>
+            <Label Text="Performance Assessment Title" FontAttributes="Bold"/>
+            <Entry x:Name="perfAssessmentTitle" Placeholder="Type performance assessment title"/>
+            <Label Text="Performance Assessment Start Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="perfStartDate"/>
+            <Label Text="Performance Assessment End Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="perfEndDate"/>
+            <Label Text="Objective Assessment Title" FontAttributes="Bold"/>
+            <Entry x:Name="objAssessmentTitle" Placeholder="Type objective assessment title"/>
+            <Label Text="Objective Assessment Start Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="objStartDate"/>
+            <Label Text="Objective Assessment End Date:" FontAttributes="Bold"/>
+            <DatePicker x:Name="objEndDate"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

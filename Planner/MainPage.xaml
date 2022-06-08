@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             x:Class="Planner.MainPage"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Create Term" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout VerticalOptions="Center"
+                 Margin="15">
+       <Label Text="Term Schedule" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Title"/>
+        <ListView x:Name="termListView"
+              ItemSelected="TermListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Start, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" HorizontalOptions="End"/>
+                            <Label Text="- " FontSize="Small" HorizontalOptions="End"/>
+                            <Label Text="{Binding End, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="Small" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

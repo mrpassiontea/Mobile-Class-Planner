@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+    x:Class="Planner.NewTermPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout VerticalOptions="Start" Margin="15">
+        <Label x:Name="pageTitleTxt" Text="Create Term" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Label Text="Term Title:" FontAttributes="Bold"/>
+        <Entry x:Name="termTitle" Placeholder="Type term title"/>
+        <Label Text="Start Date:" FontAttributes="Bold"/>
+        <DatePicker x:Name="startDate"/>
+        <Label Text="End Date:" FontAttributes="Bold"/>
+        <DatePicker x:Name="endDate"/>
+    </StackLayout>
+</ContentPage>
